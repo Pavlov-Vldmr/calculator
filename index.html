@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./scrypt.js"></script>
+  </head>
+  <body>
+    <div class="calc">
+      <div class="calc__item calc_input">
+        <form name="form"><input type="text" name="textview" /></form>
+      </div>
+      <div class="calc__item calc_back" onclick="deleteLastSimb()">&larr;</div>
+      <div class="calc__item calc_clean_all" onclick="clearA()">CE</div>
+      <div class="calc__item calc_clean" onclick="clearA()">C</div>
+      <div class="calc__item" onclick="changeSign()">&#177;</div>
+      <div class="calc__item" onclick="squareRoot()">&radic;</div>
+      <div class="calc__item calc_item_num" onclick="insert('7')">7</div>
+      <div class="calc__item calc_item_num" onclick="insert('8')">8</div>
+      <div class="calc__item calc_item_num" onclick="insert('9')">9</div>
+      <div class="calc__item" onclick="insert('/')">&divide;</div>
+      <div class="calc__item" onclick="insert('(')">(</div>
+      <div class="calc__item calc_item_num" onclick="insert('4')">4</div>
+      <div class="calc__item calc_item_num" onclick="insert('5')">5</div>
+      <div class="calc__item calc_item_num" onclick="insert('6')">6</div>
+      <div class="calc__item" onclick="insert('*')">&times;</div>
+      <div class="calc__item" onclick="insert(')')">)</div>
+      <div class="calc__item calc_item_num" onclick="insert('1')">1</div>
+      <div class="calc__item calc_item_num" onclick="insert('2')">2</div>
+      <div class="calc__item calc_item_num" onclick="insert('3')">3</div>
+      <div class="calc__item" onclick="insert('-')">-</div>
+      <div class="calc__item calc_result" onclick="showResult()">=</div>
+      <div class="calc__item calc_item_num calc_zero" onclick="insert('0')">
+        0
+      </div>
+      <div class="calc__item" onclick="insert('.')">.</div>
+      <div class="calc__item" onclick="insert('+')">+</div>
+    </div>
+  </body>
 </html>
